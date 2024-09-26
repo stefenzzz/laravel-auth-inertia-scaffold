@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    body{
+        font-family: 'Figtree',sans-serif;
+    }
+}
+
+@layer components{
+
+    .sec-container{
+        @apply max-w-[1460px] mx-auto w-full pt-20;
+    }
+        
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="url"], textarea {
+        @apply block w-full rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300
+         placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-blue-300 sm:text-sm bg-white outline-none;
+    }
+    input[type="checkbox"]{
+        @apply rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500;
+    }
+
+    .button-gray{
+        @apply px-4 py-2 rounded-md bg-gray-200 w-28 hover:bg-gray-300;  
+        transition: ease 300ms;
+    }
+
+    .error{
+        @apply text-xs text-red-500;
+    }
+    .active{
+        @apply bg-gray-100 rounded-md
+    }
+}
